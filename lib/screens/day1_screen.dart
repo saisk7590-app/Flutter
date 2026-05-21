@@ -7,15 +7,13 @@ class Day1Screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Day 1"),
-      ),
+      appBar: AppBar(title: const Text("Day 1")),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
-              "Welcome Sai 👋",
+              "Welcome SK_047 👋",
               style: TextStyle(
                 fontSize: 24,
                 color: Colors.deepPurple,
@@ -28,7 +26,7 @@ class Day1Screen extends StatelessWidget {
             // 🔘 Dummy Button
             ElevatedButton(
               onPressed: () {
-                print("Button clicked");
+                debugPrint("Button clicked");
               },
               child: const Text("Click Me"),
             ),
@@ -40,9 +38,7 @@ class Day1Screen extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) => const Day2Screen(),
-                  ),
+                  MaterialPageRoute(builder: (context) => const Day2Screen()),
                 );
               },
               child: const Text("Go to Day 2"),
