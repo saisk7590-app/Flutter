@@ -39,6 +39,9 @@ class SignupScreen extends StatelessWidget {
               decoration: InputDecoration(
                 labelText: "Full Name",
                 hintText: "Enter your full name",
+
+                prefixIcon: const Icon(Icons.person),
+
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12),
                 ),
@@ -52,6 +55,9 @@ class SignupScreen extends StatelessWidget {
               decoration: InputDecoration(
                 labelText: "Email",
                 hintText: "Enter your email",
+
+                prefixIcon: const Icon(Icons.email),
+
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12),
                 ),
@@ -65,6 +71,9 @@ class SignupScreen extends StatelessWidget {
               decoration: InputDecoration(
                 labelText: "Password",
                 hintText: "Create password",
+
+                prefixIcon: const Icon(Icons.lock),
+
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12),
                 ),
@@ -78,6 +87,9 @@ class SignupScreen extends StatelessWidget {
               decoration: InputDecoration(
                 labelText: "Confirm Password",
                 hintText: "Re-enter password",
+
+                prefixIcon: const Icon(Icons.lock_outline),
+
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12),
                 ),
