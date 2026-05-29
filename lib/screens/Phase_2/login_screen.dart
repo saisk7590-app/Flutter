@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'signup_screen.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -53,7 +54,7 @@ class LoginScreen extends StatelessWidget {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
-                  debugPrint("Login Clicked");
+                  Navigator.pushReplacementNamed(context, '/home');
                 },
                 child: const Text("Login"),
               ),

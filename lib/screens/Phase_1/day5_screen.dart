@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'login_screen.dart';
+
+import '../Phase_2/login_screen.dart';
 
 class Day5Screen extends StatelessWidget {
   const Day5Screen({super.key});
@@ -7,9 +8,7 @@ class Day5Screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Day 5"),
-      ),
+      appBar: AppBar(title: const Text("Day 5")),
 
       body: Padding(
         padding: const EdgeInsets.all(20),
@@ -19,20 +18,14 @@ class Day5Screen extends StatelessWidget {
           children: [
             const Text(
               "Welcome Sai 👋",
-              style: TextStyle(
-                fontSize: 28,
-                fontWeight: FontWeight.bold,
-              ),
+              style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
             ),
 
             const SizedBox(height: 10),
 
             const Text(
               "Flutter UI Dashboard",
-              style: TextStyle(
-                fontSize: 18,
-                color: Colors.grey,
-              ),
+              style: TextStyle(fontSize: 18, color: Colors.grey),
             ),
 
             const SizedBox(height: 30),
@@ -40,17 +33,9 @@ class Day5Screen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                buildDashboardCard(
-                  Icons.photo,
-                  "Photos",
-                  Colors.blue,
-                ),
+                buildDashboardCard(Icons.photo, "Photos", Colors.blue),
 
-                buildDashboardCard(
-                  Icons.music_note,
-                  "Music",
-                  Colors.green,
-                ),
+                buildDashboardCard(Icons.music_note, "Music", Colors.green),
               ],
             ),
 
@@ -59,17 +44,9 @@ class Day5Screen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                buildDashboardCard(
-                  Icons.folder,
-                  "Files",
-                  Colors.orange,
-                ),
+                buildDashboardCard(Icons.folder, "Files", Colors.orange),
 
-                buildDashboardCard(
-                  Icons.videocam,
-                  "Videos",
-                  Colors.red,
-                ),
+                buildDashboardCard(Icons.videocam, "Videos", Colors.red),
               ],
             ),
 
@@ -97,11 +74,7 @@ class Day5Screen extends StatelessWidget {
     );
   }
 
-  Widget buildDashboardCard(
-    IconData icon,
-    String title,
-    Color color,
-  ) {
+  Widget buildDashboardCard(IconData icon, String title, Color color) {
     return Container(
       width: 160,
       height: 140,
@@ -114,11 +87,7 @@ class Day5Screen extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(
-            icon,
-            size: 45,
-            color: Colors.white,
-          ),
+          Icon(icon, size: 45, color: Colors.white),
 
           const SizedBox(height: 15),
 
