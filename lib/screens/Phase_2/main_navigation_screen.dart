@@ -13,42 +13,34 @@ class MainNavigationScreen extends StatefulWidget {
 }
 
 class _MainNavigationScreenState extends State<MainNavigationScreen> {
-  int selectedIndex = 0;
+  int _selectedIndex = 0;
 
-  final List<Widget> screens = [
+  final List<Widget> _screens = [
     const HomeScreen(),
     const NotificationScreen(),
     const ProfileScreen(),
     const SettingsScreen(),
   ];
 
-  void onItemTapped(int index) {
+  void _onItemTapped(int index) {
     setState(() {
-      selectedIndex = index;
+      _selectedIndex = index;
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: screens[selectedIndex],
-
+      body: IndexedStack(index: _selectedIndex, children: _screens),
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: selectedIndex,
-
-        onTap: onItemTapped,
-
-        selectedItemColor: Colors.deepPurple,
-        unselectedItemColor: Colors.grey,
-        type: BottomNavigationBarType.fixed,
+        currentIndex: _selectedIndex,
+        onTap: _onItemTapped,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-
           BottomNavigationBarItem(
             icon: Icon(Icons.notifications),
             label: "Notifications",
           ),
-
           BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
           BottomNavigationBarItem(
             icon: Icon(Icons.settings),
