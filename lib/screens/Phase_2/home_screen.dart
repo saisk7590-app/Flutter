@@ -6,6 +6,9 @@ import 'phase1_screen.dart';
 import 'profile_screen.dart';
 import 'settings_screen.dart';
 
+// ✅ ADDED
+import '../Phase_3/phase3_screen.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -92,17 +95,19 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                 ),
+
                 const SizedBox(width: 12),
+
                 Expanded(
                   child: _phaseCard(
-                    icon: Icons.emoji_objects,
-                    title: 'Learning',
-                    subtitle: 'UI practice',
-                    color: colorScheme.secondary,
+                    icon: Icons.auto_awesome,
+                    title: 'Phase 3',
+                    subtitle: 'State & Logic',
+                    color: Colors.deepOrange,
                     onTap: () => Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const Phase1Screen(),
+                        builder: (context) => const Phase3Screen(),
                       ),
                     ),
                   ),
