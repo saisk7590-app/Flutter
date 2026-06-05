@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:note_keeper_new/main.dart';
-import 'package:note_keeper_new/screens/Phase_1/day4_screen.dart';
+import 'package:note_keeper/main.dart';
+import 'package:note_keeper/screens/Phase_1/day4_screen.dart';
 
 void main() {
   testWidgets('login screen navigates to home screen', (
