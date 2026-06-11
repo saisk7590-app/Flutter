@@ -12,26 +12,36 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Checkout repository
       - name: Checkout Code
         uses: actions/checkout@v3
 
+      # Install Flutter
       - name: Install Flutter
         uses: subosito/flutter-action@v2
         with:
-            channel: 'stable'
-           
+          channel: stable
 
+      # Verify Flutter installation
       - name: Check Flutter Version
         run: flutter --version
 
+      # Install packages
       - name: Install Dependencies
         run: flutter pub get
 
+      # Build Release APK
       - name: Build APK
         run: flutter build apk --release
 
+      # Rename generated APK
+      - name: Rename APK
+        run: |
+          mv build/app/outputs/flutter-apk/app-release.apk NoteKeeper.apk
+
+      # Upload APK artifact
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: release-apk
-          path: build/app/outputs/flutter-apk/app-release.apk
+          name: NoteKeeper-v1.0.0
+          path: NoteKeeper.apk
