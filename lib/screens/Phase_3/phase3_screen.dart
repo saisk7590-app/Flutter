@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../coming_soon_screen.dart';
+//import '../coming_soon_screen.dart';
 
 // =====================================================
 // PHASE 3 DAY SCREENS
@@ -14,6 +14,13 @@ import 'day17_validation_screen.dart';
 import 'day18_snackbar_screen.dart';
 import 'day19_todo_screen.dart';
 import 'day20_dynamic_list_screen.dart';
+import 'day21_state_screen.dart';
+import 'day22_theme_screen.dart';
+import 'day23_notes_screen.dart';
+import 'day24_revision_screen.dart';
+
+// ⭐ FINAL PROJECT IMPORT
+import 'smart_task_manager_screen.dart';
 
 class Phase3Screen extends StatelessWidget {
   const Phase3Screen({super.key});
@@ -43,7 +50,16 @@ class Phase3Screen extends StatelessWidget {
             ),
 
             const SizedBox(height: 25),
-
+            // =========================
+            // Final proect
+            // =========================
+            _dayCard(
+              context,
+              "Final Project",
+              "Smart Task Manager",
+              Icons.task_alt,
+              const SmartTaskManagerScreen(),
+            ),
             // =========================
             // DAY 15
             // =========================
@@ -118,7 +134,7 @@ class Phase3Screen extends StatelessWidget {
               "Day 21",
               "Local State",
               Icons.settings_backup_restore,
-              const ComingSoonScreen(day: "Day 21", title: "Local State"),
+              const Day21StateScreen(),
             ),
 
             // =========================
@@ -129,7 +145,7 @@ class Phase3Screen extends StatelessWidget {
               "Day 22",
               "Theme & Styling",
               Icons.dark_mode,
-              const ComingSoonScreen(day: "Day 22", title: "Theme & Styling"),
+              const Day22ThemeScreen(),
             ),
 
             // =========================
@@ -140,7 +156,7 @@ class Phase3Screen extends StatelessWidget {
               "Day 23",
               "Notes App",
               Icons.note_alt,
-              const ComingSoonScreen(day: "Day 23", title: "Notes App"),
+              const Day23NotesScreen(),
             ),
 
             // =========================
@@ -151,7 +167,7 @@ class Phase3Screen extends StatelessWidget {
               "Day 24",
               "Phase 3 Revision",
               Icons.school,
-              const ComingSoonScreen(day: "Day 24", title: "Phase 3 Revision"),
+              const Day24RevisionScreen(),
             ),
           ],
         ),
